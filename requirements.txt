@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+ez_setup
+setuptools
+config
+psycopg2-binary
+scipy
+click==8
