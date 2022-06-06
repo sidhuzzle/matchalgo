@@ -66,7 +66,7 @@ Year = st.selectbox('Enter the year',year,key = 'seven')
 data = []
 for x in Goals:
          data.append(pd.DataFrame(goal_dataframe_mapping[x]))
-    result = dict(functools.reduce(operator.add,map(collections.Counter, data)))
+         result = dict(functools.reduce(operator.add,map(collections.Counter, data)))
 df_goals =  pd.DataFrame(result.items(),columns=['kind_1','value'])
 df =  pd.merge(df, df_goals, left_on='kind',right_on='kind_1',suffixes=('', '_x'),how = 'inner')
 df = df.loc[:,~df.columns.duplicated()]
